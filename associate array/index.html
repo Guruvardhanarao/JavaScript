@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+        <script>
+             var emp1 = new Array(4);
+                emp1["empName"] = "Veeru";
+                emp1["empId"] = 2004;
+                emp1["empSal"] = 500000;
+                emp1["empDep"] = "Engineering";
+            
+            function shoeEmp(){
+               var resultDiv  = document.getElementById("resultDiv");
+                
+                for(var k in emp1) {
+                    var newDiv = document.createElement("div");
+                    newDiv.innerHTML = k +" " + ":" + emp1[k];
+                    resultDiv.appendChild(newDiv);
+                }
+            }
+        </script>
+    </head>
+    
+    <body>
+        <input type="button" value="shoe emp" onclick="shoeEmp()">
+        <hr>
+        <div id="resultDiv"></div>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+
+<html>
+    <head>
+        <script>
+            var emp1 = new Array();
+                emp1['name'] = "emp1";
+                emp1['salary'] = 54657;
+                emp1['department'] = "HR";
+                emp1['id'] = 1001;
+            
+            var emp2 = new Array();
+                emp2['name'] = "emp2";
+                emp2['salary'] = 344557;
+                emp2['department'] = "Testing";
+                emp2['id'] = 1002;
+            
+            var emp3 = new Array();
+                emp3['name'] = "emp3";
+                emp3['salary'] = 34346557;
+                emp3['department'] = "manger";
+                emp3['id'] = 1003;
+            
+            var emp4 = new Array();
+                emp4['name'] = "emp4";
+                emp4['salary'] = 4677657;
+                emp4['department'] = "developer";
+                emp4['id'] = 1004;
+            
+            var emps = [emp1, emp2, emp3, emp4];
+            
+            
+            function getEmps() {
+               var myDiv = document.getElementById("myDiv");
+                
+                for(var i=0; i<emps.length; i++) {
+                    var emp = emps[i];
+                    for(var k in emp){
+                        var newDiv = document.createElement("div");
+                        
+                        newDiv.innerHTML = k + ":" + emp[k];
+                        myDiv.appendChild(newDiv);
+                        
+                        
+                    }
+                    var newBr = document.createElement("br");
+                        
+                        myDiv.appendChild(newBr);
+                }
+            }
+        </script>
+    </head>
+    
+    <body>
+        <input type="button" value="get all Employees" onclick="getEmps()">
+        <div id="myDiv"></div>
+    </body>
+</html>
